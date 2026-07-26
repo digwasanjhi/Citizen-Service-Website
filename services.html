@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Services - SevaConnect</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/services.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            <div class="logo-icon">🏛️</div>
+
+            <div>
+                <h2>SevaConnect</h2>
+                <span>Citizen Service Platform</span>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html" class="active">Services</a>
+            <a href="index.html#how-it-works">How It Works</a>
+            <a href="index.html#announcements">Announcements</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <button class="login-btn" onclick="loginAlert()">Login</button>
+            <button class="register-btn" onclick="registerAlert()">Register</button>
+        </div>
+
+    </header>
+
+
+    <!-- PAGE HEADER -->
+    <section class="services-hero">
+
+        <span class="section-label">CITIZEN SERVICES</span>
+
+        <h1>Government Services</h1>
+
+        <p>
+            Find the government service you need and apply
+            easily from one place.
+        </p>
+
+        <div class="service-search">
+
+            <input
+                type="text"
+                id="serviceSearch"
+                placeholder="Search services..."
+                onkeyup="filterServices()"
+            >
+
+            <button>🔍 Search</button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORY FILTER -->
+    <section class="service-container">
+
+        <div class="category-buttons">
+
+            <button class="category active" onclick="filterCategory('all', this)">
+                All Services
+            </button>
+
+            <button class="category" onclick="filterCategory('documents', this)">
+                📄 Documents
+            </button>
+
+            <button class="category" onclick="filterCategory('certificate', this)">
+                📜 Certificates
+            </button>
+
+            <button class="category" onclick="filterCategory('welfare', this)">
+                🤝 Welfare
+            </button>
+
+        </div>
+
+
+        <!-- SERVICE CARDS -->
+        <div class="all-services" id="serviceList">
+
+
+            <!-- Birth Certificate -->
+            <div class="full-service-card"
+                 data-category="certificate"
+                 data-name="birth certificate">
+
+                <div class="service-top">
+                    <div class="large-service-icon blue">📜</div>
+
+                    <span class="online-badge">Online</span>
+                </div>
+
+                <h2>Birth Certificate</h2>
+
+                <p>
+                    Apply for a birth certificate and access
+                    related citizen services.
+                </p>
+
+                <div class="service-info">
+                    <span>📄 Required Documents</span>
+                    <span>⏱️ Easy Process</span>
+                </div>
+
+                <button onclick="applyService('Birth Certificate')">
+                    Apply Now →
+                </button>
+
+            </div>
+
+
+            <!-- Income Certificate -->
+            <div class="full-service-card"
+                 data-category="certificate"
+                 data-name="income certificate">
+
+                <div class="service-top">
+                    <div class="large-service-icon green">💰</div>
+
+                    <span class="online-badge">Online</span>
+                </div>
+
+                <h2>Income Certificate</h2>
+
+                <p>
+                    Apply for an income certificate for official
+                    and government purposes.
+                </p>
+
+                <div class="service-info">
+                    <span>📄 Required Documents</span>
+                    <span>⏱️ Easy Process</span>
+                </div>
+
+                <button onclick="applyService('Income Certificate')">
+                    Apply Now →
+                </button>
+
+            </div>
+
+
+            <!-- Caste Certificate -->
+            <div class="full-service-card"
+                 data-category="certificate"
+                 data-name="caste certificate">
+
+                <div class="service-top">
+                    <div class="large-service-icon orange">📋</div>
+
+                    <span class="online-badge">Online</span>
+                </div>
+
+                <h2>Caste Certificate</h2>
+
+                <p>
+                    Apply for caste certificate services through
+                    a simple online process.
+                </p>
+
+                <div class="service-info">
+                    <span>📄 Required Documents</span>
+                    <span>⏱️ Easy Process</span>
+                </div>
+
+                <button onclick="applyService('Caste Certificate')">
+                    Apply Now →
+                </button>
+
+            </div>
+
+
+            <!-- Residence Certificate -->
+            <div class="full-service-card"
+                 data-category="certificate"
+                 data-name="residence certificate">
+
+                <div class="service-top">
+                    <div class="large-service-icon purple">🏠</div>
+
+                    <span class="online-badge">Online</span>
+                </div>
+
+                <h2>Residence Certificate</h2>
+
+                <p>
+                    Apply for residence and domicile certificate
+                    services.
+                </p>
+
+                <div class="service-info">
+                    <span>📄 Required Documents</span>
+                    <span>⏱️ Easy Process</span>
+                </div>
+
+                <button onclick="applyService('Residence Certificate')">
+                    Apply Now →
+                </button>
+
+            </div>
+
+
+            <!-- PAN Card -->
+            <div class="full-service-card"
+                 data-category="documents"
+                 data-name="pan card">
+
+                <div class="service-top">
+                    <div class="large-service-icon blue">🪪</div>
+
+                    <span class="online-badge">Online</span>
+                </div>
+
+                <h2>PAN Card</h2>
+
+                <p>
+                    Access PAN card related application and
+                    citizen services.
+                </p>
+
+                <div class="service-info">
+                    <span>📄 Required Documents</span>
+                    <span>⏱️ Easy Process</span>
+                </div>
+
+                <button onclick="applyService('PAN Card')">
+                    Apply Now →
+                </button>
+
+            </div>
+
+
+            <!-- Welfare Scheme -->
+            <div class="full-service-card"
+                 data-category="welfare"
+                 data-name="welfare schemes">
+
+                <div class="service-top">
+                    <div class="large-service-icon green">🤝</div>
+
+                    <span class="online-badge">Online</span>
+                </div>
+
+                <h2>Welfare Schemes</h2>
+
+                <p>
+                    Explore government welfare schemes and
+                    citizen benefits.
+                </p>
+
+                <div class="service-info">
+                    <span>📄 Eligibility Details</span>
+                    <span>⏱️ Easy Process</span>
+                </div>
+
+                <button onclick="applyService('Welfare Schemes')">
+                    View Details →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer id="contact">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <div class="logo">
+                    <div class="logo-icon">🏛️</div>
+
+                    <div>
+                        <h2>SevaConnect</h2>
+                        <span>Citizen Service Platform</span>
+                    </div>
+                </div>
+
+                <p>
+                    Making government services simple,
+                    accessible and citizen-friendly.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="index.html#how-it-works">How It Works</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Citizen Help</h3>
+
+                <a href="#">Track Application</a>
+                <a href="#">FAQs</a>
+                <a href="#">Help & Support</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Contact</h3>
+
+                <p>📧 support@sevaconnect.in</p>
+                <p>📞 1800-000-000</p>
+                <p>🇮🇳 Digital India Initiative</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>© 2026 SevaConnect. Citizen Service Delivery Platform.</p>
+            <p>Designed for a better digital India.</p>
+        </div>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/services.js"></script>
+
+</body>
+</html>

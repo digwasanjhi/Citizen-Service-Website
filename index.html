@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width,initial-scale=1.0">
+        <title>SevaConnect- Citizen Service Delivery Platform</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="navbar">
+            <div class="logo">
+            <div class="logo-icon">🏛️</div>
+            <div>
+                <h2>SevaConnect</h2>
+                <span>Citizen Service Platform</span>
+            </div>
+            </div>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="services.html">Services</a>
+                <a href="#How it works">How it works</a>
+                <a href="#announcements">Announcements</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-buttons">
+                <span id="userName"></span>
+                <button class="login-btn" onclick="loginAlert()"id="loginBtn">Login</button>
+                <button class="logout-btn" onclick="logoutUser()"id="logoutBtn">Logout</button>
+                <button class="register-btn"onclick="registerAlert()"id="registerBtn">Register</button>
+            </div>
+        </header>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="bagde">Digital Services for Every Citizen</div>
+                <h1> Government Services,<span>Made Simple.</span></h1>
+                <p>
+                    Find Government Services,understand requirements,apply online and track your application-all From one simple Platform.
+                </p>
+                <div class="search-box">
+                    <input
+                    type="text"
+                    id="searchServiceInput"
+                    placeholder="Search for a Service...">
+                    <button type="button" onclick="performService()">Search</button>
+                </div>
+                <div class="quick-links">
+                    <span>Popular:</span>
+                    <a href="#Services">Birth Certificate</a>
+                    <a href="#Services">Income Certificate</a>
+                    <a href="#Services">Caste Certificate</a>
+                </div>
+                <div class="hero-card">
+                    <div class="card-top">
+                        <span class="Status-dot"></span>
+                        <span>Citizen Dashboard</span>
+                    </div>
+                    <div class="Dashboard-preview">
+                        <div class="mini-stat">
+                            <div class="mini-icon"></div>
+                            <div>
+                                <strong>12+</strong>
+                                <small>Services</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mini-stat">
+                        <div class="mini-icon"></div>
+                        <div>
+                            <strong>Easy</strong>
+                            <small>Application</small>
+                        </div>
+                    </div>
+                    <div class="mini-stat">
+                        <div class="mini-icon"></div>
+                        <div>
+                            <strong>Track</strong>
+                            <small>Status</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="application-preview">
+                    <div>
+                        <small>Recent Application</small>
+                        <h3>Birth Certificate</h3>
+                    </div>
+                    <span class="pending">Pending</span>
+                </div>
+            </div>
+        </section>
+        <section class="features">
+
+        <div class="feature-card">
+            <div class="feature-icon">🔎</div>
+            <h3>Find Services</h3>
+            <p>Discover government services easily in one place.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📝</div>
+            <h3>Apply Online</h3>
+            <p>Submit applications without unnecessary visits.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Track Application</h3>
+            <p>Check your application status anytime.</p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🔔</div>
+            <h3>Stay Updated</h3>
+            <p>Get important announcements and updates.</p>
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section class="services-section" id="services">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">OUR SERVICES</span>
+
+                <h2>Popular Citizen Services</h2>
+
+                <p>
+                    Access commonly used government services quickly.
+                </p>
+            </div>
+
+            <button class="view-btn" onclick="viewServices()">
+                View All Services →
+            </button>
+
+        </div>
+
+
+        <div class="service-grid">
+
+            <div class="service-card">
+
+                <div class="service-icon blue">📜</div>
+
+                <h3>Birth Certificate</h3>
+
+                <p>
+                    Apply for and manage birth certificate services.
+                </p>
+
+                <button onclick="applyService('Birth Certificate')">
+                    Apply Now →
+                </button>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon green">💰</div>
+
+                <h3>Income Certificate</h3>
+
+                <p>
+                    Apply for income certificate online.
+                </p>
+
+                <button onclick="applyService('Income Certificate')">
+                    Apply Now →
+                </button>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon orange">📋</div>
+
+                <h3>Caste Certificate</h3>
+
+                <p>
+                    Access caste certificate application services.
+                </p>
+
+                <button onclick="applyService('Caste Certificate')">
+                    Apply Now →
+                </button>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="service-icon purple">🏠</div>
+
+                <h3>Residence Certificate</h3>
+
+                <p>
+                    Apply for residence and domicile services.
+                </p>
+
+                <button onclick="applyService('Residence Certificate')">
+                    Apply Now →
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section" id="how-it-works">
+
+        <div class="section-heading center">
+
+            <span class="section-label">SIMPLE PROCESS</span>
+
+            <h2>How SevaConnect Works</h2>
+
+            <p>
+                Get your government service in four simple steps.
+            </p>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="step-number">01</div>
+                <h3>Search</h3>
+                <p>Find the service you need.</p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="step">
+                <div class="step-number">02</div>
+                <h3>Apply</h3>
+                <p>Fill out the application form.</p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="step">
+                <div class="step-number">03</div>
+                <h3>Submit</h3>
+                <p>Submit your application securely.</p>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="step">
+                <div class="step-number">04</div>
+                <h3>Track</h3>
+                <p>Track your application status.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ANNOUNCEMENTS -->
+    <section class="announcement-section" id="announcements">
+        <div class="announcement-content">
+
+            <div class="announcement-icon">📢</div>
+
+            <div>
+                <span>IMPORTANT ANNOUNCEMENT</span>
+                <h2>New citizen services are being added regularly.</h2>
+                <p>
+                    Stay connected with SevaConnect for the latest updates.
+                </p>
+            </div>
+
+        </div>
+
+        <button onclick="showAnnouncement()">
+            Learn More →
+        </button>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer id="contact">
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <div class="logo">
+                    <div class="logo-icon">🏛️</div>
+                    <div>
+                        <h2>SevaConnect</h2>
+                        <span>Citizen Service Platform</span>
+                    </div>
+                </div>
+
+                <p>
+                    Making government services simple,
+                    accessible and citizen-friendly.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="#services">Services</a>
+                <a href="#how-it-works">How It Works</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Citizen Help</h3>
+
+                <a href="#">Track Application</a>
+                <a href="#">FAQs</a>
+                <a href="#">Help & Support</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Contact</h3>
+
+                <p>📧 support@sevaconnect.in</p>
+                <p>📞 1800-000-000</p>
+                <p>🇮🇳 Digital India Initiative</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            <p>© 2026 SevaConnect. Citizen Service Delivery Platform.</p>
+            <p>Designed for a better digital India.</p>
+        </div>
+
+    </footer>
+  <script src="js/script.js"></script>
+
+</body>
+</html>

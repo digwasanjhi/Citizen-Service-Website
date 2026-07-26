@@ -1,0 +1,183 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Apply for Service - SevaConnect</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/apply.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <div class="logo-icon">🏛️</div>
+        <div>
+            <h2>SevaConnect</h2>
+            <span>Citizen Service Platform</span>
+        </div>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="index.html#announcements">Announcements</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<section class="apply-page">
+
+    <div class="form-heading">
+        <span class="section-label">ONLINE APPLICATION</span>
+
+        <h1>Apply for a Service</h1>
+
+        <p>
+            Fill in your details carefully to submit your application.
+        </p>
+    </div>
+
+
+    <div class="application-box">
+
+        <form id="applicationForm">
+
+            <div class="form-section">
+                <h2>Service Details</h2>
+
+                <label>Select Service</label>
+
+                <select id="service" required>
+                    <option value="">Select a service</option>
+                    <option>Birth Certificate</option>
+                    <option>Income Certificate</option>
+                    <option>Caste Certificate</option>
+                    <option>Residence Certificate</option>
+                    <option>PAN Card</option>
+                    <option>Welfare Scheme</option>
+                </select>
+            </div>
+
+
+            <div class="form-section">
+
+                <h2>Personal Details</h2>
+
+                <div class="form-grid">
+
+                    <div>
+                        <label>Full Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label>Mobile Number</label>
+                        <input
+                            type="tel"
+                            id="mobile"
+                            placeholder="Enter mobile number"
+                            maxlength="10"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label>Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter email address"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label>Date of Birth</label>
+                        <input
+                            type="date"
+                            id="dob"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+                <label>Address</label>
+
+                <textarea
+                    id="address"
+                    placeholder="Enter your complete address"
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-section">
+
+                <h2>Document</h2>
+
+                <label>Upload Supporting Document</label>
+
+                <input
+                    type="file"
+                    id="document"
+                    accept=".pdf,.jpg,.jpeg,.png"
+                >
+ <small>
+                    Accepted formats: PDF, JPG, JPEG, PNG
+                </small>
+
+            </div>
+
+
+            <div class="declaration">
+
+                <input type="checkbox" id="declaration" required>
+
+                <label for="declaration">
+                    I confirm that the information provided by me is
+                    correct and complete.
+                </label>
+
+            </div>
+
+
+            <button type="submit" class="submit-btn">
+                Submit Application →
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-bottom">
+        <p>© 2026 SevaConnect. Citizen Service Delivery Platform.</p>
+        <p>Designed for a better digital India.</p>
+    </div>
+
+</footer>
+
+
+<script src="js/apply.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Track Application - SevaConnect</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/track.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <div class="logo">
+            <div class="logo-icon">🏛️</div>
+
+            <div>
+                <h2>SevaConnect</h2>
+                <span>Citizen Service Platform</span>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="index.html#how-it-works">How It Works</a>
+            <a href="index.html#announcements">Announcements</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="myapplication.html">My Applications</a>
+        </nav>
+
+    </header>
+
+
+    <!-- TRACK PAGE -->
+
+    <main class="track-page">
+
+        <div class="track-heading">
+
+            <span class="section-label">APPLICATION STATUS</span>
+
+            <h1>Track Your Application</h1>
+
+            <p>
+                Enter your Application ID to check the current status
+                of your application.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH BOX -->
+
+        <div class="track-box">
+
+            <label for="applicationId">
+                Application ID
+            </label>
+
+            <div class="track-input">
+
+                <input
+                    type="text"
+                    id="applicationId"
+                    placeholder="Example: APP123456"
+                >
+
+                <button onclick="trackApplication()">
+                    Track Status
+                </button>
+
+            </div>
+
+            <small>
+                Enter the Application ID received after submitting your application.
+            </small>
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div class="application-result" id="applicationResult">
+
+            <div class="result-header">
+
+                <div>
+                    <span>APPLICATION DETAILS</span>
+                    <h2 id="resultId">APP000000</h2>
+                </div>
+
+                <div class="status-badge" id="resultStatus">
+                    Submitted
+                </div>
+
+            </div>
+
+
+            <div class="result-details">
+
+                <div class="detail">
+                    <span>Service</span>
+                    <strong id="resultService">
+                        —
+                    </strong>
+                </div>
+
+                <div class="detail">
+                    <span>Applicant Name</span>
+                    <strong id="resultName">
+                        —
+                    </strong>
+                </div>
+
+                <div class="detail">
+                    <span>Application Status</span>
+                    <strong>
+                        Application Submitted
+                    </strong>
+                </div>
+
+                <div class="detail">
+                    <span>Last Updated</span>
+                    <strong id="resultDate">
+                        —
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <!-- STATUS TIMELINE -->
+
+            <div class="timeline">
+
+                <div class="timeline-item completed">
+
+                    <div class="timeline-circle">✓</div>
+
+                    <div>
+                        <h3>Application Submitted</h3>
+                        <p>Your application has been successfully submitted.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-circle">2</div>
+
+                    <div>
+                        <h3>Under Review</h3>
+                         <p>Your application will be reviewed by the department.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-circle">3</div>
+
+                    <div>
+                        <h3>Approved</h3>
+                        <p>Service will be completed after approval.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NO APPLICATION -->
+
+        <div class="no-result" id="noResult">
+
+            <div>🔎</div>
+
+            <h3>Application Not Found</h3>
+
+            <p>
+                Please check your Application ID and try again.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 SevaConnect. Citizen Service Delivery Platform.
+            </p>
+
+            <p>
+                Designed for a better digital India.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/track.js"></script>
+
+</body>
+</html>
