@@ -1,0 +1,167 @@
+.applications-page {
+    min-height: 700px;
+    padding: 65px 8%;
+    background: #f7f9fc;
+}
+
+.applications-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.applications-heading h1 {
+    font-size: 38px;
+    color: #172b4d;
+    margin: 8px 0;
+}
+
+.applications-heading p {
+    color: #788394;
+    font-size: 14px;
+}
+
+
+/* APPLICATION LIST */
+
+.applications-list {
+    max-width: 850px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.application-card {
+    background: white;
+    border: 1px solid #e3e8ef;
+    border-radius: 13px;
+    padding: 25px;
+    box-shadow: 0 5px 18px rgba(20, 50, 90, 0.05);
+}
+
+.application-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.application-id {
+    font-size: 11px;
+    color: #8992a2;
+    margin-bottom: 5px;
+}
+
+.application-card h2 {
+    font-size: 18px;
+    color: #172b4d;
+}
+
+.status-badge {
+    background: #fff4d8;
+    color: #a66a00;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.application-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #edf0f4;
+}
+
+.application-info span {
+    display: block;
+    font-size: 10px;
+    color: #8992a2;
+    margin-bottom: 4px;
+}
+
+.application-info strong {
+    font-size: 12px;
+    color: #344054;
+}
+
+.track-btn {
+    margin-top: 20px;
+    border: none;
+    background: #1769d1;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.track-btn:hover {
+    background: #1256ac;
+}
+
+
+/* EMPTY */
+
+.empty-applications {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    border: 1px solid #e3e8ef;
+    border-radius: 13px;
+    padding: 50px 20px;
+    text-align: center;
+    display: none;
+}
+
+.empty-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.empty-applications h2 {
+    color: #344054;
+    font-size: 19px;
+}
+
+.empty-applications p {
+    color: #8992a2;
+    font-size: 12px;
+    margin: 7px 0 20px;
+}
+
+.empty-applications a {
+    display: inline-block;
+    text-decoration: none;
+    background: #1769d1;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .applications-page {
+        padding: 45px 5%;
+    }
+
+    .applications-heading h1 {
+        font-size: 30px;
+    }
+
+    .application-card-top {
+        flex-direction: column;
+    }
+
+    .application-info {
+        grid-template-columns: 1fr;
+    }
+}
